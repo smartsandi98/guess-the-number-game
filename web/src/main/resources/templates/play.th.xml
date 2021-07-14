@@ -1,0 +1,27 @@
+<thlogic>
+	
+	<attr sel="#head" 
+		th:replace="~{fragments/head :: headFragment}" />
+	
+	<attr sel="#game-title"
+	th:text="#{game.title}"/>
+	
+	<attr sel="#main-message"
+		th:text="${__${T(com.sandipan.utill.AttributesName).MAIN_MESSAGE}__}" />
+
+	<attr sel="#result-message"
+		th:text="${__${T(com.sandipan.utill.AttributesName).RESULT_MESSAGE}__}"/>
+
+	<attr sel="#game-message"
+		th:action="@{__${T(com.sandipan.utill.GameMappings).PLAY}__}"/>
+		
+	<attr sel="#enter-guess"
+	th:text="#{game.enter.guess}"/>
+		
+	<attr sel="#submit"
+	th:value="#{game.submit}"/>	
+		
+	<attr sel="footer"
+		th:replace="~{fragments/footer :: footerFragment}"/>
+	
+</thlogic>

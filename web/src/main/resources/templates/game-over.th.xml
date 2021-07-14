@@ -1,0 +1,26 @@
+<thlogic>
+
+	<attr sel="#head" 
+		th:replace="~{fragments/head :: headFragment}" />
+	
+	<attr sel="#game-title"
+		th:text="#{game.title}"/>
+		
+	<attr sel="#game-over"
+		th:text="#{game.over}"/>
+	
+	<attr sel="#result-message"
+		th:text="${__${T(com.sandipan.utill.AttributesName).RESULT_MESSAGE}__}"/>
+	
+	<attr sel="#play"
+		th:href="@{__${T(com.sandipan.utill.GameMappings).RESTART}__}"
+		th:text="#{game.play.again}"/>
+		
+	<attr sel="#home"
+		th:href="@{__${T(com.sandipan.utill.GameMappings).HOME}__}"
+		th:text="#{game.return.home}"/>
+	
+	<attr sel="#footer"
+		th:replace="~{fragments/footer :: footerFragment}"/>
+	
+</thlogic>
